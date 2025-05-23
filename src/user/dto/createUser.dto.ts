@@ -1,5 +1,4 @@
 import { IsEmail, IsInt, IsNotEmpty, IsNumber, IsString, ValidateNested } from "class-validator";
-
 import { HairDto } from "./custom-validator/hair.dto";
 import { AddressDto } from "./custom-validator/address.dto";
 import { Type } from "class-transformer";
