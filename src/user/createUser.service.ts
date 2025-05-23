@@ -1,11 +1,11 @@
 import { Injectable} from "@nestjs/common";
-import {userStore} from './userStore'
-import { User } from "./userStore";
+import {userStore} from './store/userStore'
+import { CreateUserDto } from "./dto/createUser.dto";
 
 @Injectable()
 export class CreateUserService{
-    createUsers(user:User){
+    createUsers(user:CreateUserDto){
         userStore.push(user) ;
-        return "User Created"
+        return user;
     }
 }

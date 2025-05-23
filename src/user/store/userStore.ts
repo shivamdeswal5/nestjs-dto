@@ -1,28 +1,4 @@
-interface Hair {
-    color : string
-    type: string
-}
-
-interface Address{
-    address: string
-    city: string
-    state: string
-    stateCode: string
-    country: string
-}
-
-export interface User {
-    id: number
-    firstName: string
-    lastName: string
-    age: number
-    gender: string
-    email: string
-    phone: number
-    hair: Hair
-    address: Address
-
-}
+import { User } from "../interface/user.interface"
 
 export const userStore : User[] = [
     {
@@ -67,3 +43,5 @@ export const userStore : User[] = [
     },
 
 ]
+export { User }
+

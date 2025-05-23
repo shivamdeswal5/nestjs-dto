@@ -2,9 +2,10 @@ import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@
 import { GetUsersService } from './getUsers.service';
 import { GetUserByIdService } from './getUsersById.service';
 import { CreateUserService } from './createUser.service';
-import { User } from './userStore';
+import { User } from './interface/user.interface';
 import { DeleteUserService } from './deleteUser.service';
 import { UpdateUserService } from './updateUser.service';
+import { CreateUserDto } from './dto/createUser.dto';
 
 @Controller('users')
 export class UserController {
@@ -17,7 +18,7 @@ export class UserController {
     ){}
 
     @Get()
-    getUsers(){
+    getUsers() : User[] {
         return this.getUserService.getUsers();
     }
 
@@ -27,7 +28,7 @@ export class UserController {
     }
 
     @Post()
-    createUser(@Body() user:User ){
+    createUser(@Body() user: CreateUserDto ){
         console.log("User to be added: ", user)
         return this.createUserService.createUsers(user);
     }
@@ -38,7 +39,7 @@ export class UserController {
     }
 
     @Put(':id')
-    updateUser(@Body() user:User, @Param('id', ParseIntPipe) id: number){
+    updateUser(@Body()  user: CreateUserDto, @Param('id', ParseIntPipe) id: number){
         console.log("updated  user data: ",user)
         return this.updateUserService.updateUser(user,id);   
     }
