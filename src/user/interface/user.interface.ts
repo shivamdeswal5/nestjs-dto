@@ -3,6 +3,12 @@ export interface Hair {
     type: string
 }
 
+export interface Task {
+  title: string;
+  startDate: string; 
+  endDate: string;
+}
+
 export interface Address{
     address: string
     city: string
@@ -21,5 +27,6 @@ export interface User {
     phone: number
     hair: Hair
     address: Address
+    tasks: Task[];
 
 }
