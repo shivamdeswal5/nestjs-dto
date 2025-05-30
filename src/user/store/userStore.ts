@@ -19,28 +19,17 @@ export const userStore : User[] = [
             state: "Mississippi",
             stateCode: "MS",
             country: "United States"
-        }
-    },
-        {
-        id: 2,
-        firstName: 'raman',
-        lastName: 'sharma',
-        age: 22,
-        gender: 'male',
-        email: 'raman@gmail.com',
-        phone: 123456789,
-        hair : {
-            color: 'Brown',
-            type: 'Curly',
         },
-        address: {
-            address: "626 Main Street",
-            city: "Phoenix",
-            state: "Mississippi",
-            stateCode: "MS",
-            country: "United States"
-        }
+        tasks:
+         [
+            {
+                title: "NestJs Introduction",
+                startDate: "2025-05-28",
+                endDate: "2025-05-30",
+            },
+        ]
     },
+
 
 ]
 export { User }
